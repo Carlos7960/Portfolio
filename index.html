@@ -1,144 +1,192 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nova Web creates affordable, professional websites for ambitious small businesses.">
-<title>Nova Web | A Better Digital Presence</title>
+<meta name="theme-color" content="#090a0e">
+<meta name="description" content="Nova Web creates premium, affordable websites for ambitious small businesses.">
+<title>Nova Web | Websites That Move Business Forward</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg:#090a0e;
-  --panel:#101219;
-  --panel2:#151823;
-  --white:#f5f5f7;
-  --muted:#9295a4;
-  --purple:#a58bff;
-  --purple2:#7857e8;
-  --border:rgba(255,255,255,.085);
+ --bg:#090a0e;
+ --surface:#10121a;
+ --surface2:#151823;
+ --white:#f5f5f7;
+ --muted:#9295a4;
+ --purple:#a58bff;
+ --accent:#7959ed;
+ --border:rgba(255,255,255,.09);
+ --container:1160px;
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 button{font:inherit;cursor:pointer}
-.container{width:min(1160px,90%);margin:auto}
-
+img{display:block;width:100%}
+.container{width:min(var(--container),90%);margin:auto}
+.gradient{
+ background:linear-gradient(100deg,#fff,#c3b3ff 55%,#7959ed);
+ -webkit-background-clip:text;background-clip:text;color:transparent
+}
 nav{
  position:fixed;top:0;left:0;right:0;z-index:100;
  background:rgba(9,10,14,.88);backdrop-filter:blur(20px);
  border-bottom:1px solid var(--border)
 }
-
 .nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Manrope',sans-serif;font-weight:800;font-size:25px;letter-spacing:4px}
+.logo{font-family:'Manrope';font-weight:800;font-size:25px;letter-spacing:4px}
 .logo span{color:var(--purple)}
 .nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{color:var(--muted);font-size:13px;transition:.2s}
+.nav-links a{font-size:13px;color:var(--muted);transition:.2s}
 .nav-links a:hover{color:white}
 .nav-actions{display:flex;gap:12px;align-items:center}
-.language{color:#ddd;background:transparent;border:1px solid var(--border);padding:9px 12px;border-radius:6px;font-size:12px}
-.nav-cta{padding:11px 18px;border-radius:6px;background:white;color:#08090d;font-size:12px;font-weight:700}
-.menu{display:none;background:none;border:0;color:white;font-size:24px}
-
-.hero{min-height:780px;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 110px}
-
-.hero:before{
- content:"";position:absolute;width:800px;height:800px;top:-180px;right:-250px;
- background:radial-gradient(circle,rgba(120,87,232,.2),transparent 68%)
+.language{background:transparent;color:white;border:1px solid var(--border);padding:10px 13px;border-radius:6px}
+.nav-cta{background:white;color:#090a0e;padding:12px 18px;border-radius:6px;font-size:12px;font-weight:800}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{
+ min-height:800px;display:flex;align-items:center;position:relative;
+ overflow:hidden;padding:150px 0 110px
 }
-
+.hero:before{
+ content:"";position:absolute;width:850px;height:850px;
+ top:-170px;right:-300px;
+ background:radial-gradient(circle,rgba(121,89,237,.22),transparent 68%)
+}
+.hero:after{
+ content:"";position:absolute;inset:0;pointer-events:none;
+ background:linear-gradient(90deg,transparent 80%,rgba(9,10,14,.4))
+}
 .hero-content{position:relative;z-index:2;max-width:850px}
 .eyebrow,.label{
- color:var(--purple);font-size:11px;font-weight:700;
+ color:var(--purple);font-size:11px;font-weight:800;
  letter-spacing:3px;text-transform:uppercase;margin-bottom:25px
 }
-
-h1{font-family:'Manrope',sans-serif;font-size:clamp(48px,7.3vw,91px);line-height:1.04;letter-spacing:-5px}
-.gradient{background:linear-gradient(100deg,#fff 5%,#c1b1ff 55%,#7959ed);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-description{max-width:550px;margin:28px 0 35px;color:var(--muted);font-size:16px;line-height:1.9}
+h1{
+ font-family:'Manrope';font-size:clamp(48px,7.3vw,91px);
+ line-height:1.04;letter-spacing:-5px
+}
+.hero-description{
+ max-width:570px;margin:28px 0 35px;
+ color:var(--muted);font-size:16px;line-height:1.9
+}
 .buttons{display:flex;gap:13px;flex-wrap:wrap}
-.btn{padding:15px 23px;border-radius:6px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.25s}
-.btn-primary{background:var(--purple2);color:white;box-shadow:0 5px 30px rgba(120,87,232,.2)}
+.btn{
+ padding:15px 23px;border-radius:6px;font-size:13px;
+ font-weight:800;display:inline-flex;align-items:center;
+ justify-content:center;gap:10px;transition:.25s
+}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 5px 30px rgba(120,87,232,.22)}
 .btn-primary:hover{transform:translateY(-3px);background:#896cf2}
 .btn-secondary{border:1px solid var(--border)}
-.btn-secondary:hover{background:var(--panel2)}
+.btn-secondary:hover{background:var(--surface2)}
 .hero-foot{margin-top:45px;color:var(--muted);font-size:12px}
 .hero-foot span{color:var(--purple)}
-
+.hero-stats{display:flex;gap:45px;margin-top:65px}
+.stat strong{display:block;font-family:'Manrope';font-size:24px}
+.stat span{font-size:11px;color:var(--muted)}
 .section{padding:110px 0}
 .section-dark{background:#0c0e14}
 .section-header{margin-bottom:48px}
-.section-title{font-family:'Manrope',sans-serif;font-size:clamp(35px,5vw,55px);line-height:1.13;letter-spacing:-2px}
-.section-text{color:var(--muted);line-height:1.8;font-size:14px;max-width:540px;margin-top:17px}
-
+.section-title{
+ font-family:'Manrope';font-size:clamp(35px,5vw,55px);
+ line-height:1.13;letter-spacing:-2px
+}
+.section-text{color:var(--muted);line-height:1.9;font-size:14px;max-width:570px;margin-top:17px}
 .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-.project{overflow:hidden;border:1px solid var(--border);border-radius:12px;background:var(--panel);transition:.3s}
+.project{
+ overflow:hidden;border:1px solid var(--border);
+ border-radius:12px;background:var(--surface);transition:.3s
+}
 .project:hover{transform:translateY(-6px);border-color:rgba(165,139,255,.4)}
-.project-image{height:290px;overflow:hidden;background:#181a24}
+.project-image{height:310px;overflow:hidden;background:#181a24;position:relative}
 .project-image img{width:100%;height:100%;object-fit:cover;transition:.5s}
 .project:hover img{transform:scale(1.05)}
-.project-info{padding:23px}
-.project-info h3{font-size:19px;margin-bottom:8px}
-.project-info p{font-size:13px;color:var(--muted);line-height:1.7}
-.tag{display:inline-block;margin-top:15px;padding:6px 10px;border-radius:4px;background:rgba(165,139,255,.1);color:#bcaaff;font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.project-info{padding:24px}
+.project-info h3{font-size:20px;margin-bottom:9px}
+.project-info p{font-size:13px;color:var(--muted);line-height:1.8}
+.tag{
+ display:inline-block;margin-top:15px;padding:7px 10px;border-radius:4px;
+ background:rgba(165,139,255,.1);color:#bcaaff;
+ font-size:9px;letter-spacing:1px;text-transform:uppercase
+}
 .portfolio-note{font-size:11px;color:var(--muted);margin-top:23px}
-
 .steps,.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.step,.benefit{padding:30px;background:var(--panel);border:1px solid var(--border);border-radius:10px}
+.step,.benefit{
+ padding:30px;background:var(--surface);
+ border:1px solid var(--border);border-radius:10px
+}
 .step-number{color:var(--purple);font-size:12px;letter-spacing:2px;margin-bottom:30px}
 .step h3,.benefit h3{font-size:19px;margin-bottom:13px}
-.step p,.benefit p{color:var(--muted);font-size:13px;line-height:1.8}
-.benefit-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:8px;color:var(--purple);background:rgba(165,139,255,.1);margin-bottom:22px;font-size:18px}
-
-.pricing-card{max-width:620px;margin:auto;padding:40px;border-radius:14px;border:1px solid rgba(165,139,255,.3);background:linear-gradient(145deg,#191626,#10121a)}
-.price{font-family:'Manrope',sans-serif;font-size:70px;font-weight:800;letter-spacing:-5px;margin:20px 0 3px}
+.step p,.benefit p{color:var(--muted);font-size:13px;line-height:1.9}
+.benefit-icon{
+ width:40px;height:40px;display:grid;place-items:center;
+ border-radius:8px;color:var(--purple);
+ background:rgba(165,139,255,.1);margin-bottom:22px;font-size:19px
+}
+.pricing-card{
+ max-width:620px;margin:auto;padding:40px;border-radius:14px;
+ border:1px solid rgba(165,139,255,.3);
+ background:linear-gradient(145deg,#191626,#10121a)
+}
+.price{font-family:'Manrope';font-size:75px;font-weight:800;letter-spacing:-5px;margin:20px 0 3px}
 .price small{font-size:15px;letter-spacing:0;color:var(--muted)}
 .price-caption{font-size:12px;color:var(--muted)}
-.setup{display:flex;justify-content:space-between;padding:17px 0;border-bottom:1px solid var(--border);border-top:1px solid var(--border);margin-top:28px;font-size:13px}
+.setup{
+ display:flex;justify-content:space-between;padding:17px 0;
+ border-bottom:1px solid var(--border);border-top:1px solid var(--border);
+ margin-top:28px;font-size:13px
+}
 .setup strong{color:var(--purple)}
 .features{list-style:none;display:grid;gap:17px;margin:27px 0}
 .features li{font-size:13px;color:#dedde6}
 .features li:before{content:"✓";color:var(--purple);margin-right:12px}
 .price-disclaimer{color:var(--muted);font-size:11px;line-height:1.8;margin-top:23px}
-
 .faq{max-width:800px;display:grid;gap:12px}
-details{padding:20px;border:1px solid var(--border);background:var(--panel);border-radius:8px}
-summary{font-size:14px;font-weight:600;cursor:pointer}
+details{padding:20px;border:1px solid var(--border);background:var(--surface);border-radius:8px}
+summary{font-size:14px;font-weight:700;cursor:pointer}
 details p{color:var(--muted);font-size:13px;line-height:1.8;margin-top:14px}
-
-.contact-box{text-align:center;padding:75px 30px;background:linear-gradient(130deg,#19152b,#10121a);border:1px solid var(--border);border-radius:13px}
+.contact-box{
+ text-align:center;padding:80px 30px;
+ background:linear-gradient(130deg,#19152b,#10121a);
+ border:1px solid var(--border);border-radius:13px
+}
 .contact-box .section-text{margin:18px auto 28px}
 .contact-box .buttons{justify-content:center}
-
 footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font-size:11px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .footer-links{display:flex;gap:20px}
 .footer-links a:hover{color:white}
-
 .reveal{opacity:0;transform:translateY(22px);transition:.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
 @media(max-width:800px){
- .nav-links{display:none;position:absolute;top:78px;left:5%;right:5%;padding:24px;background:#11131c;border:1px solid var(--border);border-radius:10px;flex-direction:column}
+ .nav-links{
+  display:none;position:absolute;top:78px;left:5%;right:5%;
+  padding:24px;background:#11131c;border:1px solid var(--border);
+  border-radius:10px;flex-direction:column
+ }
  .nav-links.open{display:flex}
  .menu{display:block}
  .nav-cta{display:none}
  .steps,.benefit-grid{grid-template-columns:1fr}
+ .hero-stats{gap:25px}
 }
-
 @media(max-width:650px){
  .portfolio-grid{grid-template-columns:1fr}
  .project-image{height:240px}
  .section{padding:80px 0}
- .hero{min-height:680px}
+ .hero{min-height:720px}
  h1{letter-spacing:-3px}
  .pricing-card{padding:27px}
  .price{font-size:60px}
+ .hero-stats{gap:20px;flex-wrap:wrap}
+ .stat strong{font-size:20px}
 }
 </style>
 </head>
@@ -148,14 +196,13 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
 <nav>
  <div class="container nav-inner">
   <a class="logo" href="#">NOVA<span>.</span></a>
-
   <div class="nav-links" id="navLinks">
    <a href="#work" data-en="Our work" data-sv="Vårt arbete">Our work</a>
-   <a href="#process" data-en="How it works" data-sv="Så fungerar det">How it works</a>
+   <a href="#process" data-en="Process" data-sv="Process">Process</a>
+   <a href="#why" data-en="Why Nova" data-sv="Varför Nova">Why Nova</a>
    <a href="#pricing" data-en="Pricing" data-sv="Priser">Pricing</a>
    <a href="#contact" data-en="Contact" data-sv="Kontakt">Contact</a>
   </div>
-
   <div class="nav-actions">
    <button class="language" id="languageButton" onclick="toggleLanguage()">SV</button>
    <a href="#contact" class="nav-cta" data-en="Get started ↗" data-sv="Kom igång ↗">Get started ↗</a>
@@ -167,380 +214,227 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
 <header class="hero">
  <div class="container">
   <div class="hero-content reveal">
-
-   <div class="eyebrow" data-en="A better digital presence" data-sv="En bättre digital närvaro">
-    A better digital presence
-   </div>
-
+   <div class="eyebrow" data-en="Independent web design studio" data-sv="Oberoende webbyrå">Independent web design studio</div>
    <h1>
     <span data-en="Your business." data-sv="Ditt företag.">Your business.</span><br>
-    <span class="gradient" data-en="A better website." data-sv="En bättre hemsida.">A better website.</span>
+    <span class="gradient" data-en="Deserves better." data-sv="Förtjänar bättre.">Deserves better.</span>
    </h1>
-
    <p class="hero-description"
-    data-en="Professional websites designed to make your business stand out. Beautiful design, straightforward pricing and no massive upfront investment."
-    data-sv="Professionella hemsidor som får ditt företag att sticka ut. Stilren design, tydliga priser och ingen stor initial investering.">
-    Professional websites designed to make your business stand out. Beautiful design, straightforward pricing and no massive upfront investment.
+    data-en="We create modern, professional websites that help small businesses stand out, build trust and make a stronger first impression."
+    data-sv="Vi skapar moderna, professionella hemsidor som hjälper småföretag att sticka ut, bygga förtroende och ge ett starkare första intryck.">
+    We create modern, professional websites that help small businesses stand out, build trust and make a stronger first impression.
    </p>
-
    <div class="buttons">
-    <a href="#contact" class="btn btn-primary" data-en="Get your website ↗" data-sv="Skaffa din hemsida ↗">Get your website ↗</a>
+    <a href="#contact" class="btn btn-primary" data-en="Build your website ↗" data-sv="Skapa din hemsida ↗">Build your website ↗</a>
     <a href="#work" class="btn btn-secondary" data-en="Explore our work" data-sv="Se våra exempel">Explore our work</a>
    </div>
-
-   <div class="hero-foot"
-    data-en="Professional design. <span>Accessible pricing.</span>"
-    data-sv="Professionell design. <span>Tillgängliga priser.</span>">
-    Professional design. <span>Accessible pricing.</span>
+   <div class="hero-foot" data-en="Thoughtful design. <span>Clear pricing.</span> No unnecessary complexity." data-sv="Genomtänkt design. <span>Tydliga priser.</span> Ingen onödig komplexitet.">
+    Thoughtful design. <span>Clear pricing.</span> No unnecessary complexity.
    </div>
-
+   <div class="hero-stats">
+    <div class="stat"><strong>01</strong><span data-en="Personal approach" data-sv="Personligt bemötande">Personal approach</span></div>
+    <div class="stat"><strong>02</strong><span data-en="Modern design" data-sv="Modern design">Modern design</span></div>
+    <div class="stat"><strong>03</strong><span data-en="Simple process" data-sv="Enkel process">Simple process</span></div>
+   </div>
   </div>
  </div>
 </header>
 
 <section class="section" id="work">
  <div class="container">
-
   <div class="section-header reveal">
    <div class="label" data-en="Selected concepts" data-sv="Utvalda koncept">Selected concepts</div>
-
-   <h2 class="section-title"
-    data-en="Designed to make<br>an impression."
-    data-sv="Design som gör<br>ett intryck.">
-    Designed to make<br>an impression.
-   </h2>
-
-   <p class="section-text"
-    data-en="Explore website concepts created for different types of businesses. Every design is built around the brand and its customers."
-    data-sv="Utforska hemsidekoncept skapade för olika typer av företag. Varje design anpassas efter varumärket och dess kunder.">
-    Explore website concepts created for different types of businesses. Every design is built around the brand and its customers.
+   <h2 class="section-title" data-en="Made for businesses.<br>Designed to stand out." data-sv="Skapat för företag.<br>Designat för att sticka ut.">Made for businesses.<br>Designed to stand out.</h2>
+   <p class="section-text" data-en="Explore a selection of website concepts for different industries. Each design has its own identity and is tailored to its audience." data-sv="Utforska ett urval av hemsidekoncept för olika branscher. Varje design har en egen identitet och anpassas efter målgruppen.">
+    Explore a selection of website concepts for different industries.
    </p>
   </div>
 
   <div class="portfolio-grid">
-
    <article class="project reveal">
     <div class="project-image">
-     <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1000" alt="Barbershop interior">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1000&q=85" alt="Modern barbershop interior">
     </div>
     <div class="project-info">
      <h3>Barber & Co.</h3>
-     <p data-en="A modern online presence for a contemporary barbershop."
-        data-sv="En modern digital närvaro för en modern barbershop.">
-      A modern online presence for a contemporary barbershop.
-     </p>
+     <p data-en="A bold and sophisticated website concept for a modern barbershop, focused on style and appointments." data-sv="Ett stilrent hemsidekoncept för en modern barbershop, med fokus på stil och bokningar.">A bold and sophisticated website concept for a modern barbershop, focused on style and appointments.</p>
      <span class="tag" data-en="Barbershop concept" data-sv="Barbershop-koncept">Barbershop concept</span>
     </div>
    </article>
 
    <article class="project reveal">
     <div class="project-image">
-     <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000" alt="Restaurant dining">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1000&q=85" alt="Elegant restaurant dining room">
     </div>
     <div class="project-info">
      <h3>Maison Restaurant</h3>
-     <p data-en="Elegant design for a restaurant that wants to stand out."
-        data-sv="Elegant design för en restaurang som vill sticka ut.">
-      Elegant design for a restaurant that wants to stand out.
-     </p>
+     <p data-en="An elegant restaurant concept with refined photography, menus and a welcoming digital experience." data-sv="Ett elegant restaurangkoncept med genomtänkta bilder, menyer och en välkomnande digital upplevelse.">An elegant restaurant concept with refined photography, menus and a welcoming digital experience.</p>
      <span class="tag" data-en="Restaurant concept" data-sv="Restaurangkoncept">Restaurant concept</span>
     </div>
    </article>
 
    <article class="project reveal">
     <div class="project-image">
-     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1000" alt="Fitness facility">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1000&q=85" alt="Modern fitness gym">
     </div>
     <div class="project-info">
      <h3>Form Athletics</h3>
-     <p data-en="A bold digital identity for a fitness brand."
-        data-sv="En tydlig digital identitet för ett träningsvarumärke.">
-      A bold digital identity for a fitness brand.
-     </p>
+     <p data-en="A strong fitness brand concept featuring bold imagery, clear information and an energetic identity." data-sv="Ett tydligt träningskoncept med kraftfulla bilder, tydlig information och en energisk identitet.">A strong fitness brand concept featuring bold imagery, clear information and an energetic identity.</p>
      <span class="tag" data-en="Fitness concept" data-sv="Träningskoncept">Fitness concept</span>
     </div>
    </article>
 
    <article class="project reveal">
     <div class="project-image">
-     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000" alt="Modern home">
+     <img loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1000&q=85" alt="Modern Nordic home">
     </div>
     <div class="project-info">
      <h3>Nordic Living</h3>
-     <p data-en="A refined website concept for home and interior services."
-        data-sv="Ett stilrent hemsidekoncept för hem- och inredningstjänster.">
-      A refined website concept for home and interior services.
-     </p>
+     <p data-en="A clean, modern concept for home improvement, interior design and property services." data-sv="Ett rent, modernt koncept för renovering, inredning och fastighetstjänster.">A clean, modern concept for home improvement, interior design and property services.</p>
      <span class="tag" data-en="Home services concept" data-sv="Hemservicekoncept">Home services concept</span>
     </div>
    </article>
-
   </div>
-
-  <p class="portfolio-note"
-   data-en="These are illustrative design concepts, not completed client projects."
-   data-sv="Dessa är illustrativa designkoncept, inte slutförda kundprojekt.">
-   These are illustrative design concepts, not completed client projects.
+  <p class="portfolio-note" data-en="These are illustrative portfolio concepts, not completed client projects." data-sv="Dessa är illustrativa portföljkoncept, inte slutförda kundprojekt.">
+   These are illustrative portfolio concepts, not completed client projects.
   </p>
-
  </div>
 </section>
 
 <section class="section section-dark" id="process">
  <div class="container">
-
   <div class="section-header reveal">
-   <div class="label" data-en="The process" data-sv="Processen">The process</div>
-
-   <h2 class="section-title"
-    data-en="Simple from<br>start to finish."
-    data-sv="Enkelt från<br>början till slut.">
-    Simple from<br>start to finish.
-   </h2>
-
-   <p class="section-text"
-    data-en="Getting your business online should be straightforward. We keep the process simple."
-    data-sv="Att ta ditt företag online ska vara enkelt. Vi gör processen smidig.">
-    Getting your business online should be straightforward. We keep the process simple.
-   </p>
+   <div class="label" data-en="How it works" data-sv="Så fungerar det">How it works</div>
+   <h2 class="section-title" data-en="A simple process.<br>A better result." data-sv="En enkel process.<br>Ett bättre resultat.">A simple process.<br>A better result.</h2>
+   <p class="section-text" data-en="No confusing technical process. Just a clear path from your idea to your finished website." data-sv="Ingen komplicerad teknisk process. Bara en tydlig väg från din idé till en färdig hemsida.">No confusing technical process. Just a clear path from your idea to your finished website.</p>
   </div>
-
   <div class="steps">
-
    <div class="step reveal">
-    <div class="step-number" data-en="01 / DISCOVER" data-sv="01 / UPPTÄCK">01 / DISCOVER</div>
+    <div class="step-number">01 / DISCOVER</div>
     <h3 data-en="Tell us about your business." data-sv="Berätta om ditt företag.">Tell us about your business.</h3>
-    <p data-en="Share your business information, preferred style and what you need from your website."
-       data-sv="Berätta om ditt företag, vilken stil du föredrar och vad du behöver från din hemsida.">
-     Share your business information, preferred style and what you need from your website.
-    </p>
+    <p data-en="Share your business details, preferred style, goals and what you need from your website." data-sv="Berätta om ditt företag, vilken stil du föredrar, dina mål och vad du behöver.">Share your business details, preferred style, goals and what you need from your website.</p>
    </div>
-
    <div class="step reveal">
-    <div class="step-number" data-en="02 / CREATE" data-sv="02 / SKAPA">02 / CREATE</div>
+    <div class="step-number">02 / DESIGN</div>
     <h3 data-en="We create your website." data-sv="Vi skapar din hemsida.">We create your website.</h3>
-    <p data-en="We customise your chosen design with your branding, content and business information."
-       data-sv="Vi anpassar designen med din profil, ditt innehåll och din företagsinformation.">
-     We customise your chosen design with your branding, content and business information.
-    </p>
+    <p data-en="We build a tailored design around your brand, content and customers, then share it for your review." data-sv="Vi skapar en design utifrån ditt varumärke, innehåll och kunder och skickar den för granskning.">We build a tailored design around your brand, content and customers, then share it for your review.</p>
    </div>
-
    <div class="step reveal">
-    <div class="step-number" data-en="03 / LAUNCH" data-sv="03 / LANSERING">03 / LAUNCH</div>
-    <h3 data-en="Get your business online." data-sv="Ta ditt företag online.">Get your business online.</h3>
-    <p data-en="Once approved and connected to your hosting and domain, your website is ready to go live."
-       data-sv="När hemsidan är godkänd och ansluten till webbhotell och domän är den redo att publiceras.">
-     Once approved and connected to your hosting and domain, your website is ready to go live.
-    </p>
+    <div class="step-number">03 / LAUNCH</div>
+    <h3 data-en="Go live with confidence." data-sv="Lansera med självförtroende.">Go live with confidence.</h3>
+    <p data-en="After approval, we help connect your domain and hosting according to the agreed setup." data-sv="Efter godkännande hjälper vi till med domän och webbhotell enligt överenskommelsen.">After approval, we help connect your domain and hosting according to the agreed setup.</p>
    </div>
-
   </div>
  </div>
 </section>
 
-<section class="section">
+<section class="section" id="why">
  <div class="container">
-
   <div class="section-header reveal">
    <div class="label" data-en="Why Nova" data-sv="Varför Nova">Why Nova</div>
-
-   <h2 class="section-title"
-    data-en="Good design<br>should be accessible."
-    data-sv="Bra design<br>ska vara tillgänglig.">
-    Good design<br>should be accessible.
-   </h2>
+   <h2 class="section-title" data-en="Good design should<br>be within reach." data-sv="Bra design ska<br>vara tillgänglig.">Good design should<br>be within reach.</h2>
   </div>
-
   <div class="benefit-grid">
-
    <div class="benefit reveal">
     <div class="benefit-icon">✦</div>
-    <h3 data-en="Professional design" data-sv="Professionell design">Professional design</h3>
-    <p data-en="A polished and modern look that gives your business a stronger online presence."
-       data-sv="Ett genomarbetat och modernt utseende som stärker ditt företags närvaro online.">
-     A polished and modern look that gives your business a stronger online presence.
-    </p>
+    <h3 data-en="Made for your brand" data-sv="Skapat för ditt varumärke">Made for your brand</h3>
+    <p data-en="Your website should feel like your business. We tailor the design to your identity and audience." data-sv="Din hemsida ska spegla ditt företag. Vi anpassar designen efter din identitet och målgrupp.">Your website should feel like your business. We tailor the design to your identity and audience.</p>
    </div>
-
    <div class="benefit reveal">
     <div class="benefit-icon">↗</div>
-    <h3 data-en="Affordable pricing" data-sv="Prisvärt">Affordable pricing</h3>
-    <p data-en="A low initial customisation fee and a straightforward monthly subscription."
-       data-sv="En låg startavgift för anpassning och en enkel månadsprenumeration.">
-     A low initial customisation fee and a straightforward monthly subscription.
-    </p>
+    <h3 data-en="Clear pricing" data-sv="Tydliga priser">Clear pricing</h3>
+    <p data-en="Understand the setup fee, subscription and any additional costs before agreeing to anything." data-sv="Du får veta startavgift, prenumeration och eventuella extrakostnader innan du tackar ja.">Understand the setup fee, subscription and any additional costs before agreeing to anything.</p>
    </div>
-
    <div class="benefit reveal">
     <div class="benefit-icon">◎</div>
-    <h3 data-en="Built for every screen" data-sv="Anpassad för alla skärmar">Built for every screen</h3>
-    <p data-en="Responsive layouts designed for phones, tablets and desktop computers."
-       data-sv="Responsiv design som fungerar på mobiler, surfplattor och datorer.">
-     Responsive layouts designed for phones, tablets and desktop computers.
-    </p>
+    <h3 data-en="Responsive by design" data-sv="Responsiv design">Responsive by design</h3>
+    <p data-en="A thoughtful experience for phones, tablets and desktop screens." data-sv="En genomtänkt upplevelse för mobiler, surfplattor och datorer.">A thoughtful experience for phones, tablets and desktop screens.</p>
    </div>
-
   </div>
  </div>
 </section>
 
 <section class="section section-dark" id="pricing">
  <div class="container">
-
   <div class="section-header reveal" style="text-align:center">
    <div class="label" data-en="Straightforward pricing" data-sv="Tydliga priser">Straightforward pricing</div>
-
-   <h2 class="section-title"
-    data-en="Professional websites.<br>Affordable by design."
-    data-sv="Professionella hemsidor.<br>Prisvärda från grunden.">
-    Professional websites.<br>Affordable by design.
-   </h2>
-
-   <p class="section-text" style="margin:16px auto 0"
-    data-en="No enormous upfront investment. Just a simple subscription."
-    data-sv="Ingen stor startkostnad. Bara en enkel prenumeration.">
-    No enormous upfront investment. Just a simple subscription.
-   </p>
+   <h2 class="section-title" data-en="Professional websites.<br>Affordable by design." data-sv="Professionella hemsidor.<br>Prisvärda från grunden.">Professional websites.<br>Affordable by design.</h2>
+   <p class="section-text" style="margin:16px auto 0" data-en="A simple starting point for businesses ready to improve their online presence." data-sv="En enkel start för företag som vill förbättra sin närvaro online.">A simple starting point for businesses ready to improve their online presence.</p>
   </div>
-
   <div class="pricing-card reveal">
-   <div class="label" data-en="Website subscription" data-sv="Hemsidesprenumeration">Website subscription</div>
-
-   <div class="price">€15<small> / month</small></div>
-
-   <p class="price-caption"
-    data-en="A simple way to get your business online."
-    data-sv="Ett enkelt sätt att ta ditt företag online.">
-    A simple way to get your business online.
-   </p>
-
+   <div class="label" data-en="Nova website plan" data-sv="Nova hemsidepaket">Nova website plan</div>
+   <div class="price">€15<small data-en=" / month" data-sv=" / månad"> / month</small></div>
+   <p class="price-caption" data-en="A straightforward monthly subscription." data-sv="En enkel månadsprenumeration.">A straightforward monthly subscription.</p>
    <div class="setup">
     <span data-en="Initial customisation" data-sv="Initial anpassning">Initial customisation</span>
     <strong>€25</strong>
    </div>
-
    <ul class="features">
-    <li data-en="Professionally designed website" data-sv="Professionellt designad hemsida">Professionally designed website</li>
-    <li data-en="Mobile-friendly layout" data-sv="Mobilanpassad layout">Mobile-friendly layout</li>
-    <li data-en="Custom business branding" data-sv="Anpassad företagsprofil">Custom business branding</li>
-    <li data-en="Access while subscribed" data-sv="Tillgång så länge prenumerationen är aktiv">Access while subscribed</li>
-    <li data-en="Straightforward setup" data-sv="Enkel uppstart">Straightforward setup</li>
+    <li data-en="Custom website design" data-sv="Anpassad webbdesign">Custom website design</li>
+    <li data-en="Mobile-friendly layout" data-sv="Mobilanpassad design">Mobile-friendly layout</li>
+    <li data-en="Business branding and content setup" data-sv="Företagsprofil och innehåll">Business branding and content setup</li>
+    <li data-en="Website access during subscription" data-sv="Tillgång till hemsidan under prenumerationen">Website access during subscription</li>
+    <li data-en="Clear agreed terms" data-sv="Tydliga överenskomna villkor">Clear agreed terms</li>
    </ul>
-
-   <a href="#contact" class="btn btn-primary" style="width:100%"
-    data-en="Get started ↗" data-sv="Kom igång ↗">
-    Get started ↗
-   </a>
-
+   <a href="#contact" class="btn btn-primary" style="width:100%" data-en="Enquire about a website ↗" data-sv="Fråga om en hemsida ↗">Enquire about a website ↗</a>
    <p class="price-disclaimer"
-    data-en="Domain registration and hosting are purchased separately by the customer. Additional changes, technical support and third-party services may incur extra charges. Subscription, ownership and cancellation terms are agreed before purchase. Prices are displayed in euros for international comparison; applicable Swedish VAT and local taxes must be clarified before sales."
-    data-sv="Kunden köper domän och webbhotell separat. Ytterligare ändringar, teknisk support och tredjepartstjänster kan medföra extra kostnader. Villkor för prenumeration, ägande och uppsägning fastställs före köp. Priserna visas i euro för internationell jämförelse. Tillämplig svensk moms och lokala skatter måste klargöras före försäljning.">
-    Domain registration and hosting are purchased separately by the customer. Additional changes, technical support and third-party services may incur extra charges. Subscription, ownership and cancellation terms are agreed before purchase. Prices are displayed in euros for international comparison; applicable Swedish VAT and local taxes must be clarified before sales.
+    data-en="Domain registration, hosting and third-party services are separate unless explicitly included in your written agreement. Additional changes and ongoing support may cost extra. Scope, ownership, subscription and cancellation terms are agreed before work begins. Prices are displayed in euros. Swedish VAT and applicable taxes must be clarified before any sale."
+    data-sv="Domänregistrering, webbhotell och tredjepartstjänster tillkommer om de inte uttryckligen ingår i ditt skriftliga avtal. Extra ändringar och löpande support kan kosta extra. Omfattning, ägande, prenumeration och uppsägning avtalas innan arbetet börjar. Priser visas i euro. Svensk moms och tillämpliga skatter måste klargöras före försäljning.">
+    Domain registration, hosting and third-party services are separate unless explicitly included in your written agreement. Additional changes and ongoing support may cost extra. Scope, ownership, subscription and cancellation terms are agreed before work begins. Prices are displayed in euros. Swedish VAT and applicable taxes must be clarified before any sale.
    </p>
   </div>
-
  </div>
 </section>
 
 <section class="section" id="faq">
  <div class="container">
-
   <div class="section-header reveal">
    <div class="label" data-en="Questions & answers" data-sv="Frågor och svar">Questions & answers</div>
-
-   <h2 class="section-title"
-    data-en="Things worth<br>knowing."
-    data-sv="Bra att<br>veta.">
-    Things worth<br>knowing.
-   </h2>
+   <h2 class="section-title" data-en="Things worth<br>knowing." data-sv="Bra att<br>veta.">Things worth<br>knowing.</h2>
   </div>
-
   <div class="faq">
-
    <details>
-    <summary data-en="What does the monthly subscription include?" data-sv="Vad ingår i månadsprenumerationen?">What does the monthly subscription include?</summary>
-    <p data-en="The subscription provides access to your Nova website while your subscription is active. Exact hosting, maintenance and support arrangements are specified in your agreement."
-       data-sv="Prenumerationen ger tillgång till din Nova-hemsida så länge den är aktiv. Exakta villkor för webbhotell, underhåll och support anges i ditt avtal.">
-     The subscription provides access to your Nova website while your subscription is active. Exact hosting, maintenance and support arrangements are specified in your agreement.
-    </p>
+    <summary data-en="What does the subscription include?" data-sv="Vad ingår i prenumerationen?">What does the subscription include?</summary>
+    <p data-en="Your website access and the agreed services described in your individual agreement. Hosting, maintenance and support are only included when explicitly stated." data-sv="Tillgång till hemsidan och de tjänster som anges i ditt avtal. Webbhotell, underhåll och support ingår endast om det uttryckligen anges.">Your website access and the agreed services described in your individual agreement. Hosting, maintenance and support are only included when explicitly stated.</p>
    </details>
-
    <details>
-    <summary data-en="Do I pay for my own domain and hosting?" data-sv="Betalar jag själv för domän och webbhotell?">Do I pay for my own domain and hosting?</summary>
-    <p data-en="Yes. Domain registration and hosting are separate purchases that you manage and pay for directly."
-       data-sv="Ja. Domänregistrering och webbhotell är separata köp som du själv hanterar och betalar för.">
-     Yes. Domain registration and hosting are separate purchases that you manage and pay for directly.
-    </p>
+    <summary data-en="Do I need my own domain?" data-sv="Behöver jag en egen domän?">Do I need my own domain?</summary>
+    <p data-en="A custom domain is recommended. Domain registration and hosting arrangements are discussed before the project starts." data-sv="En egen domän rekommenderas. Domänregistrering och webbhotell diskuteras innan projektet börjar.">A custom domain is recommended. Domain registration and hosting arrangements are discussed before the project starts.</p>
    </details>
-
    <details>
     <summary data-en="Can I request changes?" data-sv="Kan jag begära ändringar?">Can I request changes?</summary>
-    <p data-en="Initial customisation is included in the setup process. Additional changes can be quoted separately."
-       data-sv="Den första anpassningen ingår i uppstarten. Ytterligare ändringar kan offereras separat.">
-     Initial customisation is included in the setup process. Additional changes can be quoted separately.
-    </p>
+    <p data-en="Initial customisation is agreed before work starts. Further changes can be quoted separately." data-sv="Den första anpassningen avtalas innan arbetet börjar. Ytterligare ändringar kan offereras separat.">Initial customisation is agreed before work starts. Further changes can be quoted separately.</p>
    </details>
-
    <details>
-    <summary data-en="What happens if I cancel?" data-sv="Vad händer om jag avslutar prenumerationen?">What happens if I cancel?</summary>
-    <p data-en="Access to the Nova website ends under the agreed cancellation terms. You retain rights to your own business content and supplied materials. Nova retains ownership of its underlying designs and platform."
-       data-sv="Tillgången till Nova-hemsidan upphör enligt de avtalade uppsägningsvillkoren. Du behåller rättigheterna till ditt eget företagsinnehåll och material. Nova behåller ägandet av sina grundläggande designer och sin plattform.">
-     Access to the Nova website ends under the agreed cancellation terms. You retain rights to your own business content and supplied materials. Nova retains ownership of its underlying designs and platform.
-    </p>
+    <summary data-en="What happens if I cancel?" data-sv="Vad händer om jag avslutar?">What happens if I cancel?</summary>
+    <p data-en="Access and any handover arrangements follow the written cancellation terms agreed before purchase. You retain rights to your own supplied content and materials." data-sv="Tillgång och eventuell överlämning följer de skriftliga uppsägningsvillkor som avtalas före köp. Du behåller rättigheterna till ditt eget innehåll och material.">Access and any handover arrangements follow the written cancellation terms agreed before purchase. You retain rights to your own supplied content and materials.</p>
    </details>
-
    <details>
     <summary data-en="Who is Nova for?" data-sv="Vem passar Nova för?">Who is Nova for?</summary>
-    <p data-en="Nova is designed for small businesses and entrepreneurs who want a professional online presence without a large initial investment."
-       data-sv="Nova riktar sig till småföretag och entreprenörer som vill ha en professionell närvaro online utan en stor startkostnad.">
-     Nova is designed for small businesses and entrepreneurs who want a professional online presence without a large initial investment.
-    </p>
+    <p data-en="Nova focuses on small businesses and entrepreneurs looking for a professional online presence." data-sv="Nova fokuserar på småföretag och entreprenörer som vill ha en professionell närvaro online.">Nova focuses on small businesses and entrepreneurs looking for a professional online presence.</p>
    </details>
-
   </div>
  </div>
 </section>
 
 <section class="section" id="contact">
  <div class="container">
-
   <div class="contact-box reveal">
    <div class="label" data-en="Let's get started" data-sv="Låt oss börja">Let's get started</div>
-
-   <h2 class="section-title"
-    data-en="Your next website<br>starts here."
-    data-sv="Din nästa hemsida<br>börjar här.">
-    Your next website<br>starts here.
-   </h2>
-
-   <p class="section-text"
-    data-en="Tell us a little about your business and what you need. We'll take it from there."
-    data-sv="Berätta lite om ditt företag och vad du behöver. Vi hjälper dig vidare därifrån.">
-    Tell us a little about your business and what you need. We'll take it from there.
-   </p>
-
+   <h2 class="section-title" data-en="Your next website<br>starts here." data-sv="Din nästa hemsida<br>börjar här.">Your next website<br>starts here.</h2>
+   <p class="section-text" data-en="Tell us about your business, your goals and the website you have in mind. Start a conversation with Nova." data-sv="Berätta om ditt företag, dina mål och hemsidan du föreställer dig. Starta en konversation med Nova.">Tell us about your business, your goals and the website you have in mind. Start a conversation with Nova.</p>
    <div class="buttons">
-    <a class="btn btn-primary"
-     href="mailto:richmillionairecarl@gmail.com?subject=Nova%20Web%20Enquiry"
-     data-en="Contact Nova ↗" data-sv="Kontakta Nova ↗">
-     Contact Nova ↗
-    </a>
+    <a class="btn btn-primary" href="mailto:richmillionairecarl@gmail.com?subject=Nova%20Web%20Enquiry" data-en="Contact Nova ↗" data-sv="Kontakta Nova ↗">Contact Nova ↗</a>
    </div>
-
-   <p style="color:var(--muted);font-size:12px;margin-top:20px">
-    richmillionairecarl@gmail.com
-   </p>
+   <p style="color:var(--muted);font-size:12px;margin-top:20px">richmillionairecarl@gmail.com</p>
   </div>
-
  </div>
 </section>
 
 <footer>
  <div class="container footer-inner">
   <a class="logo" href="#">NOVA<span>.</span></a>
-
   <span>© <span id="year"></span> Nova Web</span>
-
   <div class="footer-links">
    <a href="#work" data-en="Portfolio" data-sv="Portfolio">Portfolio</a>
    <a href="#pricing" data-en="Pricing" data-sv="Priser">Pricing</a>
@@ -550,54 +444,51 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
 </footer>
 
 <script>
-let currentLanguage = 'en';
+let currentLanguage='en';
 
-function setLanguage(language) {
-  currentLanguage = language;
-  document.documentElement.lang = language;
+function toggleLanguage(){
+ currentLanguage=currentLanguage==='en'?'sv':'en';
+ document.documentElement.lang=currentLanguage;
 
-  document.querySelectorAll('[data-en][data-sv]').forEach(element => {
-    element.innerHTML = element.getAttribute(`data-${language}`);
-  });
+ document.querySelectorAll('[data-en]').forEach(element=>{
+  const value=element.dataset[currentLanguage];
+  if(value!==undefined) element.innerHTML=value;
+ });
 
-  const languageButton = document.getElementById('languageButton');
-
-  languageButton.textContent = language === 'en' ? 'SV' : 'EN';
-
-  languageButton.setAttribute(
-    'aria-label',
-    language === 'en'
-      ? 'Switch language to Swedish'
-      : 'Byt språk till engelska'
-  );
+ document.getElementById('languageButton').textContent=
+  currentLanguage==='en'?'SV':'EN';
 }
 
-function toggleLanguage() {
-  setLanguage(currentLanguage === 'en' ? 'sv' : 'en');
+function toggleMenu(){
+ document.getElementById('navLinks').classList.toggle('open');
 }
 
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('open');
-}
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
+document.querySelectorAll('.nav-links a').forEach(link=>{
+ link.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+ });
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent=new Date().getFullYear();
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+   }
   });
-}, { threshold: 0.12 });
+ },{threshold:.08});
 
-document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+ document.querySelectorAll('.reveal').forEach(element=>{
+  observer.observe(element);
+ });
+}else{
+ document.querySelectorAll('.reveal').forEach(element=>{
+  element.classList.add('visible');
+ });
+}
 </script>
 
 </body>
